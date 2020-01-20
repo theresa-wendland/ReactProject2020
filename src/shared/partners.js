@@ -2,7 +2,7 @@ export const PARTNERS = [
   {
     id: 0,
     name: "Bootstrap Outfitters",
-    image: "/assets/images/bootstrap-logo.png",
+    image: "/assets/images/3.jpg",
     featured: false,
     description:
       "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat."
@@ -26,7 +26,7 @@ export const PARTNERS = [
   {
     id: 3,
     name: "Node Outdoor Apparel",
-    image: "/assets/images/node-logo.png",
+    image: "/assets/images/4.jpg",
     featured: true,
     description:
       "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."

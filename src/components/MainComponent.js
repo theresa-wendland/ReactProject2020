@@ -52,6 +52,7 @@ class Main extends Component {
     return (
       <div>
         <Header />
+
         <Switch>
           <Route path="/home" component={HomePage} />
           <Route

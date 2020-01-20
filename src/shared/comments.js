@@ -3,7 +3,7 @@ export const COMMENTS = [
     id: 0,
     campsiteId: 0,
     rating: 5,
-    text: "What a magnificent view!",
+    text: "Great Product!",
     author: "Tinus Lorvaldes",
     date: "2018-10-25T16:30Z"
   },
@@ -11,7 +11,7 @@ export const COMMENTS = [
     id: 1,
     campsiteId: 0,
     rating: 4,
-    text: "The campground was beautiful, but the bugs could bite sometimes.",
+    text: "Must try.",
     author: "Brennen Ech",
     date: "2017-06-17T03:33Z"
   },

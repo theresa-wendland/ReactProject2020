@@ -2,7 +2,7 @@ export const CAMPSITES = [
   {
     id: 0,
     name: "React Lake Campground",
-    image: "/assets/images/react-lake.jpg",
+    image: "/assets/images/4.jpg",
     elevation: 1233,
     featured: false,
     description:
@@ -10,8 +10,8 @@ export const CAMPSITES = [
   },
   {
     id: 1,
-    name: "Chrome River Campground ",
-    image: "/assets/images/chrome-river.jpg",
+    name: "Mist",
+    image: "/assets/images/3.jpg",
     elevation: 877,
     featured: false,
     description:
@@ -19,17 +19,18 @@ export const CAMPSITES = [
   },
   {
     id: 2,
-    name: "Breadcrumb Trail Campground",
-    image: "/assets/images/breadcrumb-trail.jpg",
+    name: "Towel",
+    image: "/assets/images/2.jpg",
     elevation: 2901,
-    featured: false,
+    featured: true,
+    price: "$ 20",
     description:
-      "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
+      "Super soft and absorbent microfiber that dries 2x faster than traditional fibers"
   },
   {
     id: 3,
-    name: "Redux Woods Campground",
-    image: "/assets/images/redux-woods.jpg",
+    name: "Face Wash",
+    image: "/assets/images/product1.jpg",
     elevation: 42,
     featured: true,
     description:

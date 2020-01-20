@@ -6,7 +6,6 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  Jumbotron,
   Button,
   Modal,
   ModalHeader,
@@ -16,6 +15,7 @@ import {
   Input,
   Label
 } from "reactstrap";
+
 import { NavLink } from "react-router-dom";
 
 class Header extends Component {
@@ -53,54 +53,44 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Jumbotron fluid>
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <h1>NuCamp</h1>
-                <h2>a better way to camp</h2>
-              </div>
-            </div>
-          </div>
-        </Jumbotron>
         <Navbar dark sticky="top" expand="md">
           <div className="container">
-            <NavbarBrand className="mr-auto" href="/">
-              <img
-                src="/assets/images/logo.png"
-                height="30"
-                width="30"
-                alt="NuCamp Logo"
-              />
-            </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar>
+              <Nav navbar className="mr-auto">
                 <NavItem>
                   <NavLink className="nav-link" to="/home">
-                    <i className="fa fa-home fa-lg" /> Home
+                    Home
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/directory">
-                    <i className="fa fa-list fa-lg" /> Directory
+                    Products
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/aboutus">
-                    <i className="fa fa-info fa-lg" /> About
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to="/contactus">
-                    <i className="fa fa-address-card fa-lg" /> Contact Us
+                    Tutorials
                   </NavLink>
                 </NavItem>
               </Nav>
+              <span className="navbar-text m-auto  {
+                text-align: center;
+                margin-top: 100px;
+              }">
+                <NavbarBrand className="mr-auto" href="/">
+                  <img
+                    src="/assets/images/logo.png"
+                    height="50"
+                    width="200"
+                    alt="NuCamp Logo"
+                  />
+                </NavbarBrand>
+              </span>
               <span className="navbar-text ml-auto">
-                <Button outline onClick={this.toggleModal}>
-                  <i className="fa fa-sign-in fa-lg" /> Login
-                </Button>
+                <i className="fa fa-user-circle fa-2x" onClick={this.toggleModal} />
+
+                <i className="fa fa-cart-plus fa-2x" />
               </span>
             </Collapse>
           </div>

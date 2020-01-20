@@ -27,6 +27,7 @@ function RenderCampsite({ campsite }) {
         <CardImg top src={campsite.image} alt={campsite.name} />
         <CardBody>
           <CardText>{campsite.description}</CardText>
+          <Button> {" "}Add To Cart</Button> 
         </CardBody>
       </Card>
     </div>
@@ -37,7 +38,7 @@ function RenderComments({ comments }) {
   if (comments) {
     return (
       <div className="col-md-5 m-1">
-        <h4>Comments</h4>
+        <h4>Reviews</h4>
         {comments.map(comment => (
           <div key={comment.id}>
             {" "}
@@ -69,7 +70,7 @@ function CampsiteInfo(props) {
           <div className="col">
             <Breadcrumb>
               <BreadcrumbItem>
-                <Link to="/directory">Directory</Link>
+                <Link to="/directory">Products</Link>
               </BreadcrumbItem>
               <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
             </Breadcrumb>
@@ -116,8 +117,10 @@ class CommentForm extends Component {
         <Button outline onClick={this.toggleModal}>
           {" "}
           <i className="fa fa-pencil" />
-          Submit Comment
+          Submit Review
         </Button>
+        
+        
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>SubmitComment</ModalHeader>
           <ModalBody>
