@@ -16,7 +16,7 @@ const items = [
   {
     src: "/assets/images/slide3.jpg",
     altText: "Slide 2",
-    caption: "Slide 2"
+    caption: "/assets/images/sale.jpg"
   },
   {
     src: "/assets/images/slide5.jpg",
@@ -54,7 +54,7 @@ const Example = props => {
         key={item.src}
       >
         <img className="item" src={item.src} alt={item.altText} />
-        <CarouselCaption
+        <CarouselCaption 
           captionText={item.caption}
           captionHeader={item.caption}
         />

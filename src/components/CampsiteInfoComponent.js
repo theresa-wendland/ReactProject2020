@@ -15,6 +15,7 @@ import {
   Button
 } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
+import { FadeTransform } from 'react-animation-components';
 import { Link } from "react-router-dom";
 
 const minLength = len => val => val && val.length >= len;
@@ -22,7 +23,13 @@ const maxLength = len => val => !val || val.length <= len;
 
 function RenderCampsite({ campsite }) {
   return (
+    <FadeTransform
+            in
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(50%)'
+            }}>
     <div className="col-md-5 m-1">
+    
       <Card>
         <CardImg top src={campsite.image} alt={campsite.name} />
         <CardBody>
@@ -31,6 +38,7 @@ function RenderCampsite({ campsite }) {
         </CardBody>
       </Card>
     </div>
+    </FadeTransform>
   );
 }
 
@@ -65,15 +73,17 @@ function RenderComments({ comments }) {
 function CampsiteInfo(props) {
   if (props.campsite) {
     return (
+      <React.Fragment>
+      <Breadcrumb>
+      <BreadcrumbItem>
+        <Link to="/directory">Products</Link>
+      </BreadcrumbItem>
+      <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
+    </Breadcrumb>
       <div className="container">
         <div className="row">
           <div className="col">
-            <Breadcrumb>
-              <BreadcrumbItem>
-                <Link to="/directory">Products</Link>
-              </BreadcrumbItem>
-              <BreadcrumbItem active>{props.campsite.name}</BreadcrumbItem>
-            </Breadcrumb>
+           
             <h2>{props.campsite.name}</h2>
             <hr />
           </div>
@@ -83,6 +93,7 @@ function CampsiteInfo(props) {
           <RenderComments comments={props.comments} />
         </div>
       </div>
+      </React.Fragment>
     );
   }
   return <div />;

@@ -9,7 +9,7 @@ function RenderCard({ item }) {
       <CardBody>
         <CardTitle>{item.name}</CardTitle>
         <CardText>{item.description}</CardText>
-        <CardText> <Button>Add To Cart</Button> {item.price}</CardText>
+        <CardText> <Button >Add To Cart</Button> {item.price}</CardText>
       </CardBody>
     </Card>
   );
@@ -17,7 +17,7 @@ function RenderCard({ item }) {
 
 function Home(props) {
   return (
-    <React.Fragment>
+    <div>
       <Example className="carousel" />
       <div className="container">
         <div className="row">
@@ -43,7 +43,7 @@ function Home(props) {
           </div>
         </div>
       </div>
-    </React.Fragment>
+      </div>
   );
 }
 

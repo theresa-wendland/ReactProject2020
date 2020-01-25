@@ -5,40 +5,41 @@ import { Link } from "react-router-dom";
 function Footer(props) {
   return (
     <React.Fragment>
-      <div className=" top-footer pl-4 pt-4 pb-2">
-        <div className="row">
-          <div className="col-6 ">
-            <h4>Stay Connected</h4>
-            <p>Sign up for the newsletter!</p>
-            <input type="email" placeholder="Email"></input>
-            <Button>
-              {" "}
-              <a href="#">Sign Up</a>{" "}
-            </Button>
+      <div className=" top-footer  pt-4 pb-2">
+       
+          <div className="row">
+            <div className="col-4 col-sm-4 offset-1">
+              <h4>Monthly newsletter</h4>
+              <input type="email" placeholder="@Email"></input>
+              <Button color="" className="mt-2">
+                {" "}
+                <a href="#">Sign Up</a>{" "}
+              </Button>
+            </div>
+            <div className="col-4 col-sm-2 offset-1">
+              <h4> Find A Store</h4>
+            </div>
+            <div className="col-4 col-sm-2 offset-1">
+              <h4> Get In Touch</h4>
+              <a href="tel:+12065551234">
+                <i className="fa fa-phone fa-2x" />
+              </a>{" "}
+              <a href="http://www.facebook.com/">
+                <i className="fa fa-comment fa-2x" />
+              </a>{" "}
+              <a href="mailto:notreal@notreal.co">
+                <i className="fa fa-envelope fa-2x" />
+              </a>{" "}
+            </div>
           </div>
-          <div className="col-3">
-            <h4> Find A Store</h4>
-          </div>
-          <div className="col-3">
-            <h4> Get In Touch</h4>
-            <a href="tel:+12065551234">
-              <i className="fa fa-phone" />
-            </a>{" "}
-            <a href="http://www.facebook.com/">
-              <i className="fa fa-comment" />
-            </a>{" "}
-            <a href="mailto:notreal@notreal.co">
-              <i className="fa fa-envelope" />
-            </a>{" "}
-          </div>
-        </div>
+        
       </div>
 
-      <footer className="site-footer">
-        <div className="container">
+      <footer className="site-footer ">
+        
           <div className="row">
-            <div className="col-4 col-sm-2 offset-1">
-              <h5>Links</h5>
+            <div className="col-4  col-sm-4 offset-1">
+              <h4>Links</h4>
               <ul className="list-unstyled">
                 <li>
                   <Link to="/home">Home</Link>
@@ -55,7 +56,7 @@ function Footer(props) {
               </ul>
             </div>
             <div className="col-6 col-sm-3 text-center">
-              <h5>Social</h5>
+              <h4>Social</h4>
               <a
                 className="btn btn-social-icon btn-instagram"
                 href="http://instagram.com/"
@@ -82,7 +83,7 @@ function Footer(props) {
               </a>
             </div>
             <div className="col-4 col-sm-2 offset-1">
-              <h5>Help</h5>
+              <h4>Help</h4>
               <ul className="list-unstyled">
                 <li>
                   <Link to="/home">FAQ</Link>
@@ -99,7 +100,7 @@ function Footer(props) {
               </ul>
             </div>
           </div>
-        </div>
+       
       </footer>
     </React.Fragment>
   );

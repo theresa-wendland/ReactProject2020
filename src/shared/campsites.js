@@ -1,7 +1,7 @@
 export const CAMPSITES = [
   {
     id: 0,
-    name: "React Lake Campground",
+    name: "Make-up Removers",
     image: "/assets/images/4.jpg",
     elevation: 1233,
     featured: false,
@@ -30,7 +30,7 @@ export const CAMPSITES = [
   {
     id: 3,
     name: "Face Wash",
-    image: "/assets/images/product1.jpg",
+    image: "/assets/images/10.jpg",
     elevation: 42,
     featured: true,
     description:

@@ -4,10 +4,12 @@ import CampsiteInfo from "./CampsiteInfoComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
+
 import Contact from "./ContactComponent";
 import About from "./AboutComponent";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const mapStateToProps = state => {
   return {
@@ -52,7 +54,7 @@ class Main extends Component {
     return (
       <div>
         <Header />
-
+        
         <Switch>
           <Route path="/home" component={HomePage} />
           <Route
@@ -69,7 +71,10 @@ class Main extends Component {
           />
           <Redirect to="/home" />
         </Switch>
+        
+       
         <Footer />
+        
       </div>
     );
   }

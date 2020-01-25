@@ -56,8 +56,18 @@ class Header extends Component {
         <Navbar dark sticky="top" expand="md">
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
+            <span className="navbar-text mx-auto ">
+              <NavbarBrand className="mx-auto" href="/">
+                <img
+                  src="/assets/images/logo.png"
+                  height="50"
+                  width="200"
+                  alt="NuCamp Logo"
+                />
+              </NavbarBrand>
+            </span>
             <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar className="mr-auto">
+              <Nav navbar className="ml-auto">
                 <NavItem>
                   <NavLink className="nav-link" to="/home">
                     Home
@@ -74,24 +84,17 @@ class Header extends Component {
                   </NavLink>
                 </NavItem>
               </Nav>
-              <span className="navbar-text m-auto  {
-                text-align: center;
-                margin-top: 100px;
-              }">
-                <NavbarBrand className="mr-auto" href="/">
-                  <img
-                    src="/assets/images/logo.png"
-                    height="50"
-                    width="200"
-                    alt="NuCamp Logo"
-                  />
-                </NavbarBrand>
-              </span>
-              <span className="navbar-text ml-auto">
-                <i className="fa fa-user-circle fa-2x" onClick={this.toggleModal} />
 
-                <i className="fa fa-cart-plus fa-2x" />
-              </span>
+              <i
+                className="fa fa-user-circle fa-2x navbar-text "
+                onClick={this.toggleModal}
+              />
+              <br></br>
+
+              <i
+                className="fa fa-cart-plus fa-2x navbar-text"
+                
+              />
             </Collapse>
           </div>
         </Navbar>

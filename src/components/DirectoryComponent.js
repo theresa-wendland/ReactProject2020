@@ -5,20 +5,30 @@ import {
   CardImgOverlay,
   CardTitle,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
+  CardHeader
 } from "reactstrap";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
+import { FadeTransform } from 'react-animation-components';
 
 function RenderDirectoryItem({ campsite }) {
   return (
+    <FadeTransform
+    in
+    transformProps={{
+        exitTransform: 'scale(0.5) translateY(50%)'
+    }}>
+
     <Card>
+      <CardHeader body inverse style={{ backgroundColor: "#678a74 " }}>
+        <CardTitle>{campsite.name}</CardTitle>
+      </CardHeader>
       <Link to={`/directory/${campsite.id}`}>
         <CardImg width="100%" src={campsite.image} alt={campsite.name} />
-        <CardImgOverlay>
-          <CardTitle>{campsite.name}</CardTitle>
-        </CardImgOverlay>
       </Link>
     </Card>
+    </FadeTransform>
   );
 }
 
@@ -32,21 +42,28 @@ function Directory(props) {
   });
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <Breadcrumb>
-            <BreadcrumbItem>
-              <Link to="/home">Home</Link>
-            </BreadcrumbItem>
-            <BreadcrumbItem active>Directory</BreadcrumbItem>
-          </Breadcrumb>
-          <h2>In Stock</h2>
-          <hr />
+    <React.Fragment>
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <Link to="/home">Home</Link>
+        </BreadcrumbItem>
+        <BreadcrumbItem active>Products</BreadcrumbItem>
+      </Breadcrumb>
+    
+      
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h3>In Stock</h3>
+            <hr />
+          </div>
         </div>
+
+        <div className="row">{directory}</div>
       </div>
-      <div className="row">{directory}</div>
-    </div>
+      
+      
+    </React.Fragment>
   );
 }
 
